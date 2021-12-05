@@ -1,11 +1,12 @@
 //libraries and hooks
 //components
-//assets
+//assets and styled components
+import { GlobalStyle } from "../assets/styles/GlobalStyles";
 
 export const App = () => {
    return (
       <div className="App">
-         hola
+         <GlobalStyle theme="dark" />
       </div>
    );
 };
