@@ -6,7 +6,7 @@ import { GlobalStyle } from "../assets/styles/GlobalStyles";
 export const App = () => {
    return (
       <div className="App">
-         <GlobalStyle theme="dark" />
+         <GlobalStyle theme="light" />
       </div>
    );
 };
