@@ -36,7 +36,18 @@ export const reducers = (state = INITIAL_STATE, action) => {
          const newState = state.filter(todo => todo.ID !== payload)
          // the new state is returned
          return newState
+      case actionTypes.getAll:
+         return [...state]
+      case actionTypes.getCompletedOnly:
+         // I create a new array with all the todos that have its completed property set to true.
+         const completedTodos = state.filter(todo => todo.completed === true)
+         return completedTodos
+      case actionTypes.getActiveOnly:
+         // I create a new array with all the todos that have its completed property set to false.
+         const activeTodos = state.filter(todo => todo.completed === false)
+         return activeTodos
       default:
+         // if none of the cases matches, then I'll just return the state.
          return state
    }
 }
