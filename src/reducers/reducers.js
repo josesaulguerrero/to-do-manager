@@ -1,5 +1,5 @@
 // actionTypes
-import { actionTypes } from "../actionTypes";
+import { actionTypes } from "../actions/actionTypes";
 // initialState
 import { initialState as INITIAL_STATE } from "../initialState";
 
