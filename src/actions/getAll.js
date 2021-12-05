@@ -3,6 +3,6 @@ import { actionTypes } from "./actionTypes";
 
 export const getAll = () => {
    return {
-      type: actionTypes.removeTodo,
+      type: actionTypes.getAll,
    };
 };
