@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
       --fontFamily: 'Josefin Sans', sans-serif;
       --brightBlue:  hsl(220, 98%, 61%);
       --white: #fcfcff;
-      --checkedGradient: linear-gradient(linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+      --checkedGradient: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
       ${({ theme: { currentTheme } }) => (
       currentTheme === "light"
          ? `

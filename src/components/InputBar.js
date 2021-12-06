@@ -17,6 +17,7 @@ export const InputBar = () => {
          ID: uuid(),
          completed: false,
       });
+      reference.current.value = "";
    };
    return (
       <Form onSubmit={onSubmit}>

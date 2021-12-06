@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Form = styled.form`
    grid-area: 4 / 2 / 6 / 3;
    width: 100%;
-   height: 100%;
+   height: 40px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -12,10 +12,10 @@ export const Form = styled.form`
 
 export const Input = styled.input`
    width: 70%;
-   height: 60%;
+   height: 100%;
    padding: 0 10px;
    border: none;
-   font: 1.4rem var(--fontFamily);
+   font: 1.3rem var(--fontFamily);
    background-color: var(--white);
    border-radius: 5px 0 0 5px;
    outline: none;
@@ -28,12 +28,12 @@ export const Input = styled.input`
 
 export const Button = styled.button`
    width: 30%;
-   height: 60%;
+   height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
    border: none;
-   color: var(--lightGray);
+   color: var(--white);
    font: bold 1.6rem var(--fontFamily);
    background-color: var(--brightBlue);
    outline: none;
