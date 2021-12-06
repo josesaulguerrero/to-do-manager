@@ -1,11 +1,12 @@
 //libraries and hooks
 //components
 //assets and styled components
+import { StyledHeader } from "../assets/styles/HeaderStyles";
 
-export const Header = ({ className, children }) => {
+export const Header = ({ children }) => {
    return (
-      <header className={className} >
+      <StyledHeader >
          {children}
-      </header>
+      </StyledHeader>
    );
 };

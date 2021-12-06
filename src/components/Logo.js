@@ -1,11 +1,12 @@
 //libraries and hooks
 //components
 //assets and styled components
+import { LogoText } from "../assets/styles/LogoStyles";
 
-export const Logo = ({ className, children }) => {
+export const Logo = () => {
    return (
-      <h1 className={className}>
-         {children}
-      </h1>
+      <LogoText >
+         TODO
+      </LogoText>
    );
 };

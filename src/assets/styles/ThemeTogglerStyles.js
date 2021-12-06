@@ -11,7 +11,7 @@ const imageHandler = ({ currentTheme }) => (
       : SunIcon
 );
 
-export const StyledThemeToggler = styled(ThemeToggler)`
+export const Button = styled.button`
    width: 35px;
    height: 35px;
    border: none;

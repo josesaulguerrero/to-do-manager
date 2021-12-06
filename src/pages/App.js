@@ -3,9 +3,9 @@
 //assets and styled components
 import { AppLayout } from "../assets/styles/AppLayout";
 import { Background } from "../assets/styles/Background";
-import { StyledHeader } from "../assets/styles/StyledHeader";
-import { LogoText } from "../assets/styles/StyledLogo";
-import { StyledThemeToggler } from "../assets/styles/StyledThemeToggler";
+import { Header } from "../components/Header";
+import { Logo } from "../components/Logo";
+import { ThemeToggler } from "../components/ThemeToggler";
 import { InputBar } from "../components/InputBar";
 // context
 
@@ -13,10 +13,10 @@ export const App = () => {
    return (
       <AppLayout>
          <Background />
-         <StyledHeader>
-            <LogoText>TODO</LogoText>
-            <StyledThemeToggler />
-         </StyledHeader>
+         <Header>
+            <Logo />
+            <ThemeToggler />
+         </Header>
          <InputBar />
       </AppLayout>
    );

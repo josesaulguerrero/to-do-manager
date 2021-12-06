@@ -1,5 +1,6 @@
 //libraries and hooks
 import { useContext } from "react";
+import { Button } from "../assets/styles/ThemeTogglerStyles";
 //components
 //assets
 // context
@@ -10,6 +11,6 @@ export const ThemeToggler = ({ className }) => {
    const { toggleTheme } = useContext(themeContext);
 
    return (
-      <button onClick={toggleTheme} className={className}></button>
+      <Button onClick={toggleTheme} className={className}></Button>
    );
 };
