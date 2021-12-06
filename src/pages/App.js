@@ -7,20 +7,13 @@ import { Header } from "../components/Header";
 import { Logo } from "../components/Logo";
 import { ThemeToggler } from "../components/ThemeToggler";
 import { InputBar } from "../components/InputBar";
-import { AllTodosList } from "./AllTodosList";
+import { List } from "../components/List";
 // context
 
 export const App = () => {
    return (
       <AppLayout>
-         <Background />
-         <Header>
-            <Logo />
-            <ThemeToggler />
-         </Header>
-         <InputBar />
 
-         <AllTodosList />
       </AppLayout>
    );
 };

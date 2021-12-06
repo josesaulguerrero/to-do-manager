@@ -33,7 +33,7 @@ export const Button = styled.button`
    justify-content: center;
    align-items: center;
    border: none;
-   color: var(--white);
+   color: var(--lightGray);
    font: bold 1.6rem var(--fontFamily);
    background-color: var(--brightBlue);
    outline: none;

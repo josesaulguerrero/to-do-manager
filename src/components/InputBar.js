@@ -3,7 +3,7 @@ import { useContext, useRef } from "react";
 import { v4 as uuid } from 'uuid';
 //components
 //assets and styled components
-import { Button, Form, Input } from "../assets/styles/InputBar";
+import { Button, Form, Input } from "../assets/styles/InputBarStyles";
 // context
 import { todosContext } from "../context/todosContext";
 
