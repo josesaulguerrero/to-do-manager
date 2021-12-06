@@ -1,12 +1,11 @@
 //libraries and hooks
 //components
 //assets and styled components
-import { Logo } from "./Logo";
 
-export const Header = () => {
+export const Header = ({ className, children }) => {
    return (
-      <header className="Header">
-         <Logo />
+      <header className={className} >
+         {children}
       </header>
    );
 };

@@ -10,7 +10,7 @@ const backgroundHandler = ({ currentTheme }) => {
 };
 
 export const Background = styled.section`
-   grid-area: 1 / 1 / 4 / 4;
+   grid-area: 1 / 1 / 7 / 4;
    background-image: url(${props => backgroundHandler(props.theme)});
    background-position: center center;
    background-size: cover;

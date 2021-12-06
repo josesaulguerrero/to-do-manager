@@ -5,6 +5,6 @@ export const AppLayout = styled.div`
    height: 100vh;
    max-height: 100vh;
    display: grid;
-   grid-template: repeat(10, 10%) / minmax(20px, 1fr) minmax(280px, 550px) minmax(20px, 1fr);
+   grid-template: repeat(20, 5%) / minmax(20px, 1fr) minmax(280px, 550px) minmax(20px, 1fr);
    overflow: hidden;
 `;

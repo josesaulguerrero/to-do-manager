@@ -3,14 +3,19 @@
 //assets and styled components
 import { AppLayout } from "../assets/styles/AppLayout";
 import { Background } from "../assets/styles/Background";
-import { Header } from "../components/Header";
+import { StyledHeader } from "../assets/styles/StyledHeader";
+import { LogoText } from "../assets/styles/StyledLogo";
+import { StyledThemeToggler } from "../assets/styles/StyledThemeToggler";
 // context
 
 export const App = () => {
    return (
       <AppLayout>
          <Background />
-         <Header />
+         <StyledHeader>
+            <LogoText>TODO</LogoText>
+            <StyledThemeToggler />
+         </StyledHeader>
       </AppLayout>
    );
 };
