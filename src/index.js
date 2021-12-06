@@ -5,7 +5,7 @@ import { GlobalStyle } from './assets/styles/GlobalStyles';
 import { TodosContextProvider } from './context/todosContext';
 import { ThemeContextProvider } from './context/themeContext';
 // components
-import { App } from "./pages/App";
+import { App } from "./routes/App";
 
 
 ReactDOM.render(

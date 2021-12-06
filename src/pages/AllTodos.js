@@ -6,7 +6,7 @@ import { TodoCard } from "../components/todoCard";
 // context
 import { todosContext } from "../context/todosContext";
 
-export const AllTodosList = () => {
+export const AllTodos = () => {
    const { getAll } = useContext(todosContext);
    const allTodos = getAll();
    return (
