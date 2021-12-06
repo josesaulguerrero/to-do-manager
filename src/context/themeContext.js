@@ -15,7 +15,7 @@ export const ThemeContextProvider = ({ children }) => {
    };
 
    return (
-      <themeContext.Provider value={toggleTheme} >
+      <themeContext.Provider value={{ toggleTheme }} >
          {/* I pass the theme state through the styled-components provider, so That i can access it from my styles */}
          <StyledComponentsThemeProvider theme={{ currentTheme: theme }}>
             {children}
