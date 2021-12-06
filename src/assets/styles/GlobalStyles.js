@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
-const customPropertiesHandler = (({ theme }) => {
-   return theme === "light"
+const customPropertiesHandler = (({ currentTheme }) => {
+   return currentTheme === "light"
       ? `
          --lightGray: hsl(0, 0 %, 98 %);
          --lightGrayishBlue: hsl(233, 11 %, 84 %);
@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
       --fontFamily: 'Josefin Sans', sans-serif;
       --brightBlue:  hsl(220, 98 %, 61 %);
       --checkedGradient: linear-gradient(linear-gradient hsl(192, 100 %, 67 %) to hsl(280, 87 %, 65 %));
-      ${(props) => customPropertiesHandler(props)}
+      ${(props) => customPropertiesHandler(props.theme)}
    }
 
    body {

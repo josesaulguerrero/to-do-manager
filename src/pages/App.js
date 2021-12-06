@@ -8,7 +8,7 @@ import { Background } from "../assets/styles/Background";
 export const App = () => {
    return (
       <AppLayout>
-         <Background theme="light" />
+         <Background />
       </AppLayout>
    );
 };

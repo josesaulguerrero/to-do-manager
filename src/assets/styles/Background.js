@@ -3,15 +3,15 @@ import styled from "styled-components";
 import lightBackground from "../images/bg-desktop-light.jpg";
 import darkBackground from "../images/bg-desktop-dark.jpg";
 
-const backgroundHandler = ({ theme }) => (
-   theme === "light"
+const backgroundHandler = ({ currentTheme }) => {
+   return currentTheme === "light"
       ? lightBackground
-      : darkBackground
-);
+      : darkBackground;
+};
 
 export const Background = styled.section`
    grid-area: 1 / 1 / 4 / 4;
-   background-image: url(${props => backgroundHandler(props)});
+   background-image: url(${props => backgroundHandler(props.theme)});
    background-position: center center;
    background-size: cover;
 `;
