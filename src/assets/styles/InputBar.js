@@ -33,7 +33,9 @@ export const Button = styled.button`
    justify-content: center;
    align-items: center;
    border: none;
+   color: var(--white);
    font: bold 1.6rem var(--fontFamily);
+   background-color: var(--brightBlue);
    outline: none;
    border-radius: 0 5px 5px 0;
    cursor: pointer;

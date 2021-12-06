@@ -7,6 +7,7 @@ import { Header } from "../components/Header";
 import { Logo } from "../components/Logo";
 import { ThemeToggler } from "../components/ThemeToggler";
 import { InputBar } from "../components/InputBar";
+import { AllTodosList } from "./AllTodosList";
 // context
 
 export const App = () => {
@@ -18,6 +19,8 @@ export const App = () => {
             <ThemeToggler />
          </Header>
          <InputBar />
+
+         <AllTodosList />
       </AppLayout>
    );
 };
