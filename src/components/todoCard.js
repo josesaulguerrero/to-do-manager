@@ -14,6 +14,7 @@ export const TodoCard = ({ content, ID, completed }) => {
             type="checkbox"
             checked={completed}
             onClick={() => toggleCompleteTodo(ID)}
+            readOnly
          />
          <span>{content}</span>
          <button onClick={() => removeTodo(ID)}>&#10761;</button>

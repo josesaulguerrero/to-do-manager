@@ -2,7 +2,7 @@
 import { useContext } from "react";
 //components
 import { TodoCard } from "../components/todoCard";
-//assets
+//assets and styled components
 // context
 import { todosContext } from "../context/todosContext";
 
