@@ -6,6 +6,7 @@ import { Background } from "../assets/styles/Background";
 import { StyledHeader } from "../assets/styles/StyledHeader";
 import { LogoText } from "../assets/styles/StyledLogo";
 import { StyledThemeToggler } from "../assets/styles/StyledThemeToggler";
+import { InputBar } from "../components/InputBar";
 // context
 
 export const App = () => {
@@ -16,6 +17,7 @@ export const App = () => {
             <LogoText>TODO</LogoText>
             <StyledThemeToggler />
          </StyledHeader>
+         <InputBar />
       </AppLayout>
    );
 };

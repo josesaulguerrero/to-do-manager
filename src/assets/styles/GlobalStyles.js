@@ -42,5 +42,6 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
       font-family: var(---fontFamily);
       scroll-behavior: smooth;
+      box-sizing: border-box;
    }
 `;
