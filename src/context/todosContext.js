@@ -8,63 +8,67 @@ import { initialState } from "../initialState";
 export const todosContext = createContext();
 
 export const TodosContextProvider = ({ children }) => {
-   const [todos, setTodos] = useState(initialState);
+   const [allTodos, setAllTodos] = useState(initialState);
 
    const saveTodosInLocalStorage = (todos) => {
       window.localStorage.setItem("ToDos", JSON.stringify(todos));
    };
 
    const addTodo = (newTodo) => {
-      setTodos(prevState => {
-         // the first thing to do is to create a new state.
-         const newState = [
-            newTodo,
-            ...prevState
-         ];
-         // then the cached variable is updated.
-         saveTodosInLocalStorage(newState);
-         // and finally, I set my state's new value.
-         return newState;
-      });
-   };
-
-   const removeTodo = (todoId) => {
-      setTodos(prevState => {
-         // I don't want to modify the original state, so I create a copy of it.
-         const todosCopy = JSON.parse(JSON.stringify(prevState));
-         // then a new state is created without the to-do that matches the given Id.
-         const newState = todosCopy.filter(todo => todo.ID !== todoId);
-         // and finally, the cached variable is updated as well.
+      setAllTodos(prevState => {
+         const newState = JSON.parse(JSON.stringify(prevState));
+         newState.unshift(newTodo);
          saveTodosInLocalStorage(newState);
          return newState;
       });
    };
 
-   const toggleCompleteTodo = (todoId) => {
-      setTodos(prevState => {
-         // I don't want to modify the original state, so I create a copy of it.
-         const todosCopy = JSON.parse(JSON.stringify(prevState));
-         // then I update the to-do that matches the ID given as parameter
-         const newState = todosCopy.map(todo =>
-            todo.ID === todoId
-               ? { ...todo, completed: !todo.completed }
-               : todo
-         );
-         // and finally, the cached variable is updated as well.
+   const removeTodo = (todoID) => {
+      setAllTodos(prevState => {
+         const prevStateCopy = JSON.parse(JSON.stringify(prevState));
+         const newState = prevStateCopy.filter(todo => todoID !== todo.ID);
          saveTodosInLocalStorage(newState);
          return newState;
       });
+   };
+
+   const toggleCompleteTodo = (todoID) => {
+      setAllTodos(prevState => {
+         const prevStateCopy = JSON.parse(JSON.stringify(prevState));
+         const newState = prevStateCopy
+            .map(todo =>
+               todo.ID === todoID
+                  ? { ...todo, completed: !todo.completed }
+                  : todo
+            );
+         saveTodosInLocalStorage(newState);
+         return newState;
+      });
+   };
+
+   const getActiveTodos = () => {
+      const activeTodos = allTodos.filter(todo => todo.completed === false);
+      return activeTodos;
+   };
+
+   const getCompletedTodos = () => {
+      const completedTodos = allTodos.filter(todo => todo.completed === true);
+      return completedTodos;
+   };
+
+   const todosUtilities = {
+      allTodos,
+      setAllTodos,
+      addTodo,
+      removeTodo,
+      toggleCompleteTodo,
+      saveTodosInLocalStorage,
+      getActiveTodos,
+      getCompletedTodos
    };
 
    return (
-      <todosContext.Provider value={{
-         addTodo,
-         toggleCompleteTodo,
-         removeTodo,
-         saveTodosInLocalStorage,
-         todos,
-         setTodos
-      }}>
+      <todosContext.Provider value={todosUtilities}>
          {children}
       </todosContext.Provider>
    );

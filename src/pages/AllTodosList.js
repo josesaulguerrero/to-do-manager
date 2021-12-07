@@ -8,11 +8,11 @@ import { Section } from "../assets/styles/TodosListStyles";
 // context
 import { todosContext } from "../context/todosContext";
 
-export const TodosList = ({ filterBy }) => {
-   const { todos, setTodos, saveTodosInLocalStorage } = useContext(todosContext);
+export const AllTodosList = () => {
+   const { allTodos, setAllTodos, saveTodosInLocalStorage } = useContext(todosContext);
 
    const onReorder = (stateWithReOrderedToDos) => {
-      setTodos(stateWithReOrderedToDos);
+      setAllTodos(stateWithReOrderedToDos);
       saveTodosInLocalStorage(stateWithReOrderedToDos);
    };
 
@@ -21,13 +21,13 @@ export const TodosList = ({ filterBy }) => {
          <Reorder.Group
             axis="y"
             onReorder={onReorder}
-            values={todos}
+            values={allTodos}
             layoutScroll
             className="TodoList"
             as="ul"
          >
             {
-               todos.map((todo) =>
+               allTodos.map((todo) =>
                   <TodoCard
                      todo={todo}
                      key={todo.ID}
