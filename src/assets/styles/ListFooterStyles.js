@@ -8,7 +8,12 @@ export const FooterSection = styled.section`
    justify-content: space-between;
    align-items: center;
    padding: 0 20px;
-   background-color: var(--white);
+   background-color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--white)"
+         : "var(--darkBlue__desaturated)"
+   };
+   border-radius: 0 0 5px 5px;
 `;
 
 export const FooterSpan = styled.span`

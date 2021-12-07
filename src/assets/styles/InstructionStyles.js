@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const InstructionText = styled.span`
    grid-area: 20 / 2 / 21 / 3;
+   color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--darkerGrayishBlue)"
+         : "var(--lighterGrayishBlue)"
+   };
    font: bold var(--fontSize) var(--fontFamily);
    text-align: center;
 

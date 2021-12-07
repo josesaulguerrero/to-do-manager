@@ -24,7 +24,7 @@ export const Input = styled.input`
    background-color: ${({ theme }) =>
       theme.currentTheme === "light"
          ? "var(--white)"
-         : "var(--darkBlue)"
+         : "var(--darkBlue__desaturated)"
    };
    border-radius: 5px 0 0 5px;
    outline: none;

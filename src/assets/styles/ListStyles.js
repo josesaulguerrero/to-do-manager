@@ -9,11 +9,23 @@ export const Section = styled.section`
    grid-template-areas: "list"
                         "footer";
    border-radius: 5px;
-   background-color: var(--white);
-   box-shadow: 0 5px 15px var(--lightGrayishBlue);
+   background-color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--white)"
+         : "var(--darkBlue__desaturated)"
+   };
+   box-shadow: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "0 5px 15px var(--lightGrayishBlue)"
+         : "none"
+   };
 
    @media (min-width: 500px) {
-      box-shadow: 0 55px 75px var(--lightGrayishBlue);
+      box-shadow: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "0 55px 75px var(--lightGrayishBlue)"
+         : "none"
+   }
    }
 
    .TodoList {
@@ -35,7 +47,11 @@ export const Section = styled.section`
    }
 
    .TodoList::-webkit-scrollbar-thumb {
-      background: var(--lightGrayishBlue);
+      background: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--lightGrayishBlue)"
+         : "var(--darkBlue)"
+   };
       border-radius: 5px;
    }
 `;

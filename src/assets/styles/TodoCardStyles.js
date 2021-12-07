@@ -13,8 +13,16 @@ export const Card = styled.article`
    grid-template-areas: "checkbox content button";
    align-items: center;
    padding: 5px 20px;
-   border-bottom: 1px solid var(--lightGrayishBlue);
-   background-color: var(--white);
+   border-bottom: 1px solid ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--lightGrayishBlue)"
+         : "var(--darkerGrayishBlue)"
+   };
+   background-color: var(--white);background-color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--white)"
+         : "var(--darkBlue__desaturated)"
+   };
    list-style: none;
    cursor: grab;
    :active {
@@ -82,12 +90,22 @@ export const Checkbox = styled.input`
 
    :checked + span {
       text-decoration: line-through;
-      color: var(--darkGrayishBlue);
+      color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--darkGrayishBlue)"
+         : "var(--darkerGrayishBlue)"
+   };
    }
 `;
 
 export const Span = styled.span`
+
    grid-area: content;
+   color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--darkerGrayishBlue)"
+         : "var(--lighterGrayishBlue)"
+   };
    font: var(--fontSize) var(--fontFamily);
    white-space: nowrap;
    overflow: hidden;

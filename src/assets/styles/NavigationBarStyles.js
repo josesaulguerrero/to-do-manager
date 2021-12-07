@@ -8,9 +8,17 @@ export const NavBar = styled.nav`
    align-items: center;
    justify-content: center;
    gap: 10px;
-   background-color: var(--white);
+   background-color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--white)"
+         : "var(--darkBlue__desaturated)"
+   };
    border-radius: 5px;
-   box-shadow: 0 5px 15px var(--lightGrayishBlue);
+   box-shadow: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "0 5px 15px var(--lightGrayishBlue)"
+         : "none"
+   };
 
    @media (min-width: 500px) {
       grid-area: 17 / 2 / 18 / 3;
