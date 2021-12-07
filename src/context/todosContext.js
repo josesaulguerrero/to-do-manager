@@ -57,6 +57,15 @@ export const TodosContextProvider = ({ children }) => {
       });
    };
 
+   const clearCompletedTodos = () => {
+      setAllTodos(prevState => {
+         const prevStateCopy = JSON.parse(JSON.stringify(prevState));
+         const newState = prevStateCopy.filter(todo => todo.completed !== true);
+         saveTodosInLocalStorage(newState);
+         return newState;
+      });
+   };
+
    const todosUtilities = {
       allTodos,
       setAllTodos,
@@ -67,6 +76,7 @@ export const TodosContextProvider = ({ children }) => {
       addTodo,
       removeTodo,
       toggleCompleteTodo,
+      clearCompletedTodos,
       saveTodosInLocalStorage,
    };
 

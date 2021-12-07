@@ -7,6 +7,8 @@ import { Header } from "../components/Header";
 import { Logo } from "../components/Logo";
 import { ThemeToggler } from "../components/ThemeToggler";
 import { InputBar } from "../components/InputBar";
+import { List } from "../components/List";
+import { ListFooter } from "../components/ListFooter";
 // context
 
 export const Layout = ({ children }) => {
@@ -18,7 +20,10 @@ export const Layout = ({ children }) => {
             <ThemeToggler />
          </Header>
          <InputBar />
-         {children}
+         <List>
+            {children}
+            <ListFooter />
+         </List>
       </AppLayout>
    );
 };

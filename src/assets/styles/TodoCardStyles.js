@@ -82,6 +82,7 @@ export const Checkbox = styled.input`
 
    :checked + span {
       text-decoration: line-through;
+      color: var(--darkGrayishBlue);
    }
 `;
 

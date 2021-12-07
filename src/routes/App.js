@@ -2,9 +2,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //components
 import { Layout } from "../pages/Layout";
-import { AllTodosList } from "../pages/AllTodosList";
-import { ActiveTodosList } from "../pages/ActiveTodosList";
-import { CompletedTodosList } from "../pages/CompletedTodosList";
+import { AllTodos } from "../pages/AllTodos";
+import { ActiveTodos } from "../pages/ActiveTodos";
+import { CompletedTodos } from "../pages/CompletedTodos";
 
 
 export const App = () => {
@@ -12,9 +12,9 @@ export const App = () => {
       <Layout>
          <BrowserRouter>
             <Routes>
-               <Route path="/" element={<AllTodosList />} />
-               <Route path="active" element={<ActiveTodosList />} />
-               <Route path="completed" element={<CompletedTodosList />} />
+               <Route path="/" element={<AllTodos />} />
+               <Route path="active" element={<ActiveTodos />} />
+               <Route path="completed" element={<CompletedTodos />} />
             </Routes>
          </BrowserRouter>
       </Layout>
