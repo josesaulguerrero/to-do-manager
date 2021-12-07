@@ -5,20 +5,11 @@ export const Section = styled.section`
    width: 100%;
    height: 100%;
    display: grid;
-   grid-template: 1fr 40px / 100%;
+   grid-template: 1fr auto / 100%;
    grid-template-areas: "list"
                         "footer";
    border-radius: 5px;
-   background-color: ${({ theme }) =>
-      theme.currentTheme === "light"
-         ? "var(--white)"
-         : "var(--darkBlue__desaturated)"
-   };
-   box-shadow: ${({ theme }) =>
-      theme.currentTheme === "light"
-         ? "0 5px 15px var(--lightGrayishBlue)"
-         : "none"
-   };
+
 
    @media (min-width: 500px) {
       box-shadow: ${({ theme }) =>
@@ -33,6 +24,16 @@ export const Section = styled.section`
       width: 100%;
       height: 100%;
       border-radius: 5px 5px 0 0;
+      background-color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--white)"
+         : "var(--darkBlue__desaturated)"
+   };
+      box-shadow: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "0 5px 15px var(--lightGrayishBlue)"
+         : "none"
+   };
       overflow-y: auto;
       overflow-x: hidden;
    }

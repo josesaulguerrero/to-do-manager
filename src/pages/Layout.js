@@ -26,7 +26,6 @@ export const Layout = ({ children }) => {
             {children}
             <ListFooter />
          </List>
-         <NavigationBar />
          <Instruction />
       </AppLayout>
    );
