@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { useMotionValue, Reorder } from "framer-motion";
 //components
 //assets and styled components
-import { Card, Checkbox, RemoveButton, Span } from "../assets/styles/TodoCardStyles";
+import { Checkbox, RemoveButton, Span } from "../assets/styles/TodoCardStyles";
 // context
 import { todosContext } from "../context/todosContext";
 
@@ -20,7 +20,7 @@ export const TodoCard = ({ todo }) => {
       height: "40px",
       display: "grid",
       gridTemplate: "100% / 30px 1fr 30px",
-      gridTemplateAreas: "checkbox content button",
+      gridTemplateAreas: '"checkbox content button"',
       alignItems: "center",
       padding: "5px 20px",
       borderBottom: "1px solid var(--lightGrayishBlue)",
