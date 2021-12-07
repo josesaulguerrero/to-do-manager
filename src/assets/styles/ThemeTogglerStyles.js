@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ThemeToggler } from "../../components/ThemeToggler";
 
 // images
 import SunIcon from "../images/icon-sun.svg";

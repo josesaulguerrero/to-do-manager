@@ -4,6 +4,24 @@ import styled from "styled-components";
 import crossImage from "../images/icon-cross.svg";
 import checkImage from "../images/icon-check.svg";
 
+export const Card = styled.article`
+   width: 100%;
+   max-width: 450px;
+   height: 40px;
+   display: grid;
+   grid-template: 100% / 30px 1fr 30px;
+   grid-template-areas: "checkbox content button";
+   align-items: center;
+   padding: 5px 20px;
+   border-bottom: 1px solid var(--lightGrayishBlue);
+   background-color: var(--lightGray);
+   list-style: none;
+   cursor: grab;
+   :active {
+      cursor: grabbing;
+   }
+`;
+
 export const Checkbox = styled.input`
    grid-area: checkbox;
    width: 20px;
