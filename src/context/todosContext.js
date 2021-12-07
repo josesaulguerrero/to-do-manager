@@ -10,6 +10,10 @@ export const todosContext = createContext();
 export const TodosContextProvider = ({ children }) => {
    const [todos, setTodos] = useState(initialState);
 
+   const saveTodosInLocalStorage = (todos) => {
+      window.localStorage.setItem("ToDos", JSON.stringify(todos));
+   };
+
    const addTodo = (newTodo) => {
       setTodos(prevState => {
          // the first thing to do is to create a new state.
@@ -18,7 +22,7 @@ export const TodosContextProvider = ({ children }) => {
             ...prevState
          ];
          // then the cached variable is updated.
-         window.localStorage.setItem("ToDos", JSON.stringify(newState));
+         saveTodosInLocalStorage(newState);
          // and finally, I set my state's new value.
          return newState;
       });
@@ -31,7 +35,7 @@ export const TodosContextProvider = ({ children }) => {
          // then a new state is created without the to-do that matches the given Id.
          const newState = todosCopy.filter(todo => todo.ID !== todoId);
          // and finally, the cached variable is updated as well.
-         window.localStorage.setItem("ToDos", JSON.stringify(newState));
+         saveTodosInLocalStorage(newState);
          return newState;
       });
    };
@@ -47,23 +51,9 @@ export const TodosContextProvider = ({ children }) => {
                : todo
          );
          // and finally, the cached variable is updated as well.
-         window.localStorage.setItem("ToDos", JSON.stringify(newState));
+         saveTodosInLocalStorage(newState);
          return newState;
       });
-   };
-
-   const getAll = () => {
-      return todos;
-   };
-
-   const getCompletedOnly = () => {
-      const completedTodos = todos.filter(todo => todo.completed === true);
-      return completedTodos;
-   };
-
-   const getActiveOnly = () => {
-      const activeTodos = todos.filter(todo => todo.completed === false);
-      return activeTodos;
    };
 
    return (
@@ -71,9 +61,9 @@ export const TodosContextProvider = ({ children }) => {
          addTodo,
          toggleCompleteTodo,
          removeTodo,
-         getAll,
-         getCompletedOnly,
-         getActiveOnly
+         saveTodosInLocalStorage,
+         todos,
+         setTodos
       }}>
          {children}
       </todosContext.Provider>

@@ -1,12 +1,14 @@
 import styled from "styled-components";
+import { Reorder } from "framer-motion";
 
 // images
 import crossImage from "../images/icon-cross.svg";
 import checkImage from "../images/icon-check.svg";
 
-export const Card = styled.li`
+export const Card = styled(Reorder.Item)`
    min-width: 90%;
    width: 100%;
+   max-width: 450px;
    height: 40px;
    display: grid;
    grid-template: 100% / 30px 1fr 30px;

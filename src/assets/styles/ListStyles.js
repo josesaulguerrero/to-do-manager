@@ -15,8 +15,7 @@ export const Section = styled.section`
       grid-area: list;
       width: 100%;
       height: 100%;
-      /* background-color: red; */
       border-radius: 5px;
-      overflow-y: scroll;
+      overflow-y: auto;
    }
 `;

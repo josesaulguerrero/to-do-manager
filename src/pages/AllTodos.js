@@ -1,5 +1,6 @@
 //libraries and hooks
 import { useContext } from "react";
+import { Reorder } from "framer-motion";
 //components
 import { TodoCard } from "../components/todoCard";
 //assets and styled components
@@ -7,20 +8,29 @@ import { TodoCard } from "../components/todoCard";
 import { todosContext } from "../context/todosContext";
 
 export const AllTodos = () => {
-   const { getAll } = useContext(todosContext);
-   const allTodos = getAll();
+   const { todos, setTodos, saveTodosInLocalStorage } = useContext(todosContext);
+
+   const onReorder = (stateWithReOrderedToDos) => {
+      setTodos(stateWithReOrderedToDos);
+      saveTodosInLocalStorage(stateWithReOrderedToDos);
+   };
+
    return (
-      <ul>
+      <Reorder.Group
+         axis="y"
+         onReorder={onReorder}
+         values={todos}
+         layoutScroll
+         as="ul"
+      >
          {
-            allTodos.map(({ content, ID, completed }) =>
+            todos.map((todo) =>
                <TodoCard
-                  key={ID}
-                  content={content}
-                  ID={ID}
-                  completed={completed}
+                  todo={todo}
+                  key={todo.ID}
                />
             )
          }
-      </ul>
+      </Reorder.Group>
    );
 };
