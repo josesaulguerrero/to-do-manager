@@ -8,11 +8,12 @@ export const FooterSection = styled.section`
    justify-content: space-between;
    align-items: center;
    padding: 0 20px;
+   background-color: var(--white);
 `;
 
 export const FooterSpan = styled.span`
    color: var(--darkGrayishBlue);
-   font: 1.4rem var(--fontFamily);
+   font: 1.3rem var(--fontFamily);
 `;
 
 export const FooterButton = styled.button`
@@ -20,8 +21,9 @@ export const FooterButton = styled.button`
    height: 100%;
    border: none;
    color: var(--darkGrayishBlue);
-   font: 1.4rem var(--fontFamily);
+   font: 1.3rem var(--fontFamily);
    background-color: transparent;
    outline: none;
    cursor: pointer;
 `;
+

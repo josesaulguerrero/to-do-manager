@@ -9,14 +9,14 @@ import { CompletedTodos } from "../pages/CompletedTodos";
 
 export const App = () => {
    return (
-      <Layout>
-         <BrowserRouter>
+      <BrowserRouter>
+         <Layout>
             <Routes>
                <Route path="/" element={<AllTodos />} />
                <Route path="active" element={<ActiveTodos />} />
                <Route path="completed" element={<CompletedTodos />} />
             </Routes>
-         </BrowserRouter>
-      </Layout>
+         </Layout>
+      </BrowserRouter>
    );
 };

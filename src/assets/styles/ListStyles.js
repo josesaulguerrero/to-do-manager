@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-   grid-area: 6 / 2 / 17 / 3;
+   grid-area: 6 / 2 / 18 / 3;
    width: 100%;
    height: 100%;
    display: grid;
    grid-template: 1fr 40px / 100%;
    grid-template-areas: "list"
                         "footer";
-   background-color: var(--lightGray);
    border-radius: 5px;
+   background-color: var(--white);
+   box-shadow: 0 5px 15px var(--lightGrayishBlue);
 
    .TodoList {
       grid-area: list;
       width: 100%;
       height: 100%;
-      border-radius: 5px;
+      border-radius: 5px 5px 0 0;
       overflow-y: auto;
       overflow-x: hidden;
    }

@@ -4,7 +4,6 @@ import { Reorder } from "framer-motion";
 //components
 import { TodoCard } from "../components/TodoCard";
 //assets and styled components
-import { Section } from "../assets/styles/ListStyles";
 // context
 import { todosContext } from "../context/todosContext";
 

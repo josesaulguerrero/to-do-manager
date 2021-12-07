@@ -9,6 +9,7 @@ import { ThemeToggler } from "../components/ThemeToggler";
 import { InputBar } from "../components/InputBar";
 import { List } from "../components/List";
 import { ListFooter } from "../components/ListFooter";
+import { NavigationBar } from "../components/NavigationBar";
 // context
 
 export const Layout = ({ children }) => {
@@ -24,6 +25,7 @@ export const Layout = ({ children }) => {
             {children}
             <ListFooter />
          </List>
+         <NavigationBar />
       </AppLayout>
    );
 };

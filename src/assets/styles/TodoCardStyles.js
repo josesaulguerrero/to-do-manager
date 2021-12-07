@@ -14,7 +14,7 @@ export const Card = styled.article`
    align-items: center;
    padding: 5px 20px;
    border-bottom: 1px solid var(--lightGrayishBlue);
-   background-color: var(--lightGray);
+   background-color: var(--white);
    list-style: none;
    cursor: grab;
    :active {

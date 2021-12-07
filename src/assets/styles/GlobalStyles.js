@@ -33,6 +33,7 @@ export const GlobalStyle = createGlobalStyle`
 
    body {
       font-size: 1.8rem;
+      background-color: var(--lightGray);
    }
 
    *,
