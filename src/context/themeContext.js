@@ -4,14 +4,21 @@ import { ThemeProvider as StyledComponentsThemeProvider } from "styled-component
 export const themeContext = createContext();
 
 export const ThemeContextProvider = ({ children }) => {
-   const [theme, setTheme] = useState("light");
+   const [theme, setTheme] = useState(
+      window.localStorage.getItem("todosTheme")
+         ? JSON.parse(window.localStorage.getItem("todosTheme"))
+         : "light"
+   );
 
    const toggleTheme = () => {
-      setTheme(prevTheme => (
-         prevTheme === "light" /* is the previous theme equal to "light"? */
-            ? "dark" /* if so, then toggle the theme to "dark" */
-            : "light" /* else, toggle the theme to "light" */
-      ));
+      setTheme(prevTheme => {
+         const newTheme =
+            prevTheme === "light" /* is the previous theme equal to "light"? */
+               ? "dark" /* if so, then toggle the theme to "dark" */
+               : "light";
+         window.localStorage.setItem("todosTheme", JSON.stringify(newTheme));
+         return newTheme;
+      });
    };
 
    return (

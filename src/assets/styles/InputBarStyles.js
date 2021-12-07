@@ -15,8 +15,17 @@ export const Input = styled.input`
    height: 100%;
    padding: 0 20px;
    border: none;
+   color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--darkerGrayishBlue)"
+         : "var(--lighterGrayishBlue)"
+   };
    font: var(--fontSize) var(--fontFamily);
-   background-color: var(--white);
+   background-color: ${({ theme }) =>
+      theme.currentTheme === "light"
+         ? "var(--white)"
+         : "var(--darkBlue)"
+   };
    border-radius: 5px 0 0 5px;
    outline: none;
    box-sizing: border-box;
