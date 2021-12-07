@@ -11,4 +11,15 @@ export const NavBar = styled.nav`
    background-color: var(--white);
    border-radius: 5px;
    box-shadow: 0 5px 15px var(--lightGrayishBlue);
+
+   @media (min-width: 500px) {
+      grid-area: 17 / 2 / 18 / 3;
+      justify-self: center;
+      width: fit-content;
+      max-width: 150px;
+      height: 25px;
+      align-self: start;
+      border-radius: 0 0 5px 5px;
+      box-shadow: none;
+   }
 `;

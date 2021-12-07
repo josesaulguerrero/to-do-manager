@@ -12,7 +12,7 @@ export const ListFooter = () => {
    return (
       <FooterSection>
          <FooterSpan>
-            {length} item{length > 1 && "s"} left
+            {length} item{length !== 1 && "s"} left
          </FooterSpan>
          <FooterButton
             onClick={clearCompletedTodos}

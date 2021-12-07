@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 //components
 //assets
 // initial state
-import { initialState } from "../initialState";
+import { initialState } from "../data/initialState";
 
 export const todosContext = createContext();
 

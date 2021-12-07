@@ -13,9 +13,9 @@ export const Form = styled.form`
 export const Input = styled.input`
    width: 70%;
    height: 100%;
-   padding: 0 10px;
+   padding: 0 20px;
    border: none;
-   font: 1.3rem var(--fontFamily);
+   font: var(--fontSize) var(--fontFamily);
    background-color: var(--white);
    border-radius: 5px 0 0 5px;
    outline: none;

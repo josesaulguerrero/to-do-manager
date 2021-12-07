@@ -10,6 +10,7 @@ import { InputBar } from "../components/InputBar";
 import { List } from "../components/List";
 import { ListFooter } from "../components/ListFooter";
 import { NavigationBar } from "../components/NavigationBar";
+import { Instruction } from "../components/Instruction";
 // context
 
 export const Layout = ({ children }) => {
@@ -26,6 +27,7 @@ export const Layout = ({ children }) => {
             <ListFooter />
          </List>
          <NavigationBar />
+         <Instruction />
       </AppLayout>
    );
 };

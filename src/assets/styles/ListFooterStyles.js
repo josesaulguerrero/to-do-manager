@@ -13,7 +13,7 @@ export const FooterSection = styled.section`
 
 export const FooterSpan = styled.span`
    color: var(--darkGrayishBlue);
-   font: 1.3rem var(--fontFamily);
+   font: var(--fontSize) var(--fontFamily);
 `;
 
 export const FooterButton = styled.button`
@@ -21,7 +21,7 @@ export const FooterButton = styled.button`
    height: 100%;
    border: none;
    color: var(--darkGrayishBlue);
-   font: 1.3rem var(--fontFamily);
+   font: var(--fontSize) var(--fontFamily);
    background-color: transparent;
    outline: none;
    cursor: pointer;

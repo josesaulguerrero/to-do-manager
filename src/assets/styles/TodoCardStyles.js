@@ -88,7 +88,7 @@ export const Checkbox = styled.input`
 
 export const Span = styled.span`
    grid-area: content;
-   font: 1.3rem var(--fontFamily);
+   font: var(--fontSize) var(--fontFamily);
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;

@@ -12,6 +12,10 @@ export const Section = styled.section`
    background-color: var(--white);
    box-shadow: 0 5px 15px var(--lightGrayishBlue);
 
+   @media (min-width: 500px) {
+      box-shadow: 0 55px 75px var(--lightGrayishBlue);
+   }
+
    .TodoList {
       grid-area: list;
       width: 100%;
@@ -26,12 +30,12 @@ export const Section = styled.section`
    }
 
    .TodoList::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 3px grey;
+      /* box-shadow: inset 0 0 3px grey; */
       border-radius: 5px;
    }
 
    .TodoList::-webkit-scrollbar-thumb {
-      background: var(--brightBlue);
+      background: var(--lightGrayishBlue);
       border-radius: 5px;
    }
 `;
