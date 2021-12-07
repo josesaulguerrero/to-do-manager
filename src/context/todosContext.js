@@ -1,5 +1,5 @@
 //libraries and hooks
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 //components
 //assets
 // initial state
@@ -9,6 +9,17 @@ export const todosContext = createContext();
 
 export const TodosContextProvider = ({ children }) => {
    const [allTodos, setAllTodos] = useState(initialState);
+   const [completedTodos, setCompletedTodos] = useState(
+      allTodos.filter(todo => todo.completed === true)
+   );
+   const [activeTodos, setActiveTodos] = useState(
+      allTodos.filter(todo => todo.completed === false)
+   );
+
+   useEffect(() => {
+      setCompletedTodos(allTodos.filter(todo => todo.completed === true));
+      setActiveTodos(allTodos.filter(todo => todo.completed === false));
+   }, [allTodos]);
 
    const saveTodosInLocalStorage = (todos) => {
       window.localStorage.setItem("ToDos", JSON.stringify(todos));
@@ -46,25 +57,17 @@ export const TodosContextProvider = ({ children }) => {
       });
    };
 
-   const getActiveTodos = () => {
-      const activeTodos = allTodos.filter(todo => todo.completed === false);
-      return activeTodos;
-   };
-
-   const getCompletedTodos = () => {
-      const completedTodos = allTodos.filter(todo => todo.completed === true);
-      return completedTodos;
-   };
-
    const todosUtilities = {
       allTodos,
       setAllTodos,
+      completedTodos,
+      setCompletedTodos,
+      activeTodos,
+      setActiveTodos,
       addTodo,
       removeTodo,
       toggleCompleteTodo,
       saveTodosInLocalStorage,
-      getActiveTodos,
-      getCompletedTodos
    };
 
    return (
