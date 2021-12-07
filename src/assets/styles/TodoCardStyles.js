@@ -57,7 +57,12 @@ export const Checkbox = styled.input`
       top: 0;
       bottom: 0;
       border: none;
-      background: var(--checkedGradient), url(${checkImage});
+      /* background-color: rebeccapurple; */
+      background-image: url("${() => checkImage}"), var(--checkedGradient);
+      background-position: center;
+      background-size: auto;
+      background-position: center;
+      background-repeat: no-repeat;
       border-radius: 50%;
       visibility: hidden;
       opacity: 0;
