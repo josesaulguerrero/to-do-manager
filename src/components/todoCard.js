@@ -1,5 +1,5 @@
 //libraries and hooks
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { useMotionValue, Reorder } from "framer-motion";
 //components
 //assets and styled components

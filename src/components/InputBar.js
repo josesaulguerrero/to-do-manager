@@ -1,5 +1,5 @@
 //libraries and hooks
-import { useContext, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { v4 as uuid } from 'uuid';
 //components
 //assets and styled components

@@ -1,5 +1,5 @@
 //libraries and hooks
-import { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 //components
 //assets
 // initial state

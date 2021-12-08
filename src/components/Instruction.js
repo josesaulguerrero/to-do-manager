@@ -1,4 +1,5 @@
 //libraries and hooks
+import React from "react";
 //components
 //assets
 import { InstructionText } from "../assets/styles/InstructionStyles";

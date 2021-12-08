@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 //components
 //assets and styled components
 import { FooterSection, FooterButton, FooterSpan, InfoSection, NavSection } from "../assets/styles/ListFooterStyles";

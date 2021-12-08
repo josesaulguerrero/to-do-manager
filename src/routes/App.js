@@ -1,4 +1,5 @@
-//libraries and hooks
+//libraries and hook
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //components
 import { Layout } from "../pages/Layout";
