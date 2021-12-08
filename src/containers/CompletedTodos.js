@@ -1,6 +1,6 @@
 //libraries and hooks
 import React, { useContext } from "react";
-import { Reorder } from "framer-motion";
+// import { Reorder } from "framer-motion";
 //components
 import { TodoCard } from "@components/TodoCard";
 import { Placeholder } from "../components/Placeholder";
@@ -16,14 +16,15 @@ export const CompletedTodos = () => {
    };
 
    return (
-      <Reorder.Group
-         axis="y"
-         onReorder={onReorder}
-         values={completedTodos}
-         layoutScroll
-         className="TodoList"
-         as="ul"
-      >
+      // <Reorder.Group
+      //    axis="y"
+      //    onReorder={onReorder}
+      //    values={completedTodos}
+      //    layoutScroll
+      //    className="TodoList"
+      //    as="ul"
+      // >
+      <ul className="TodoList">
          {
             // if there are no todos...
             (allTodos.length === 0) &&
@@ -43,6 +44,7 @@ export const CompletedTodos = () => {
                />
             )
          }
-      </Reorder.Group>
+      </ul>
+      // </Reorder.Group>
    );
 };
