@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import { Reorder } from "framer-motion";
 //components
-import { TodoCard } from "../components/TodoCard";
+import { TodoCard } from "@components/TodoCard";
 import { Placeholder } from "../components/Placeholder";
 //assets and styled components
 // context
