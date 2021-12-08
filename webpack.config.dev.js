@@ -60,7 +60,7 @@ module.exports = {
          filename: './index.html',
          title: 'Tasks manager',
          favicon: './public/favicon.ico'
-      })
+      }),
    ],
    devServer: {
       watchFiles: ['src/**'],

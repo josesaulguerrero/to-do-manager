@@ -1,6 +1,8 @@
 const HTMLplugin = require('html-webpack-plugin');
 const cssMinimizer = require('css-minimizer-webpack-plugin');
 const terserPlugin = require('terser-webpack-plugin');
+const { InjectManifest } = require("workbox-webpack-plugin");
+const copyPlugin = require("copy-webpack-plugin");
 const path = require('path');
 
 module.exports = {
@@ -62,6 +64,18 @@ module.exports = {
          filename: './index.html',
          title: 'Tasks manager',
          favicon: './public/favicon.ico'
+      }),
+      new copyPlugin({
+         patterns: [
+            { from: "./public/manifest.json", to: "" },
+            { from: "./public/logo192.png", to: "" },
+            { from: "./public/logo512.png", to: "" },
+            { from: "./public/favicon.ico", to: "" },
+         ]
+      }),
+      new InjectManifest({
+         swSrc: "./src/sw.js",
+         swDest: "./sw.js",
       })
    ],
    optimization: {

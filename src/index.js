@@ -8,7 +8,8 @@ import { TodosContextProvider } from '@context/todosContext';
 import { ThemeContextProvider } from '@context/themeContext';
 // components
 import { App } from "./routes/App";
-
+// service-worker
+import { serviceWorkerRegister } from './ServiceWorkerRegister';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,3 +22,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+serviceWorkerRegister();
