@@ -1,6 +1,6 @@
 //libraries and hooks
 import React, { useContext } from "react";
-// import { Reorder } from "framer-motion";
+import { Reorder } from "framer-motion";
 //components
 import { TodoCard } from "@components/TodoCard";
 // import { TodoCard } from "../components/TodoCard";
@@ -18,15 +18,14 @@ export const AllTodos = () => {
    };
 
    return (
-      // <Reorder.Group
-      //    axis="y"
-      //    onReorder={onReorder}
-      //    values={allTodos}
-      //    layoutScroll
-      //    className="TodoList"
-      //    as="ul"
-      // >
-      <ul className="TodoList" s>
+      <Reorder.Group
+         axis="y"
+         onReorder={onReorder}
+         values={allTodos}
+         layoutScroll
+         className="TodoList"
+         as="ul"
+      >
          {
             allTodos.length > 0
                ? allTodos.map((todo) =>
@@ -37,7 +36,6 @@ export const AllTodos = () => {
                )
                : <Placeholder>You haven't created any to-dos yet...</Placeholder>
          }
-      </ul>
-      /* </Reorder.Group> */
+      </Reorder.Group>
    );
 };
