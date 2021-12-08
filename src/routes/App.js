@@ -2,10 +2,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //components
-import { Layout } from "../pages/Layout";
-import { AllTodos } from "../pages/AllTodos";
-import { ActiveTodos } from "../pages/ActiveTodos";
-import { CompletedTodos } from "../pages/CompletedTodos";
+import { Layout } from "../containers/Layout";
+import { AllTodos } from "../containers/AllTodos";
+import { ActiveTodos } from "../containers/ActiveTodos";
+import { CompletedTodos } from "../containers/CompletedTodos";
 
 
 export const App = () => {

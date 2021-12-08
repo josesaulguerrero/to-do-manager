@@ -8,7 +8,7 @@ import { Card, Checkbox, RemoveButton, Span } from "../assets/styles/TodoCardSty
 import { todosContext } from "../context/todosContext";
 
 
-export const TodoCard = ({ todo, classname }) => {
+export const TodoCard = ({ todo }) => {
    const { removeTodo, toggleCompleteTodo } = useContext(todosContext);
 
    const y = useMotionValue(0);

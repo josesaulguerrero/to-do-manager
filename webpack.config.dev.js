@@ -30,7 +30,10 @@ module.exports = {
          {
             test: /\.mjs$/,
             include: /node_modules/,
-            type: "javascript/auto"
+            type: "javascript/auto",
+            use: {
+               loader: "babel-loader"
+            }
          },
          {
             test: /\.(png|jpg|ico|svg|jpeg|webp)$/,
