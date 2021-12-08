@@ -12,6 +12,10 @@ export const InputBar = () => {
    const reference = useRef();
    const onSubmit = (event) => {
       event.preventDefault();
+      if (reference.current.value.trim().length === 0) {
+         reference.current.setCustomValidity("this field can't be empty");
+         return;
+      }
       addTodo({
          content: reference.current.value,
          ID: uuid(),
