@@ -6,6 +6,7 @@ import { TodoCard } from "../components/TodoCard";
 //assets and styled components
 // context
 import { todosContext } from "../context/todosContext";
+import { Placeholder } from "../components/Placeholder";
 
 export const AllTodos = () => {
    const { allTodos, setAllTodos, saveTodosInLocalStorage } = useContext(todosContext);
@@ -25,12 +26,14 @@ export const AllTodos = () => {
          as="ul"
       >
          {
-            allTodos.map((todo) =>
-               <TodoCard
-                  todo={todo}
-                  key={todo.ID}
-               />
-            )
+            allTodos.length > 0
+               ? allTodos.map((todo) =>
+                  <TodoCard
+                     todo={todo}
+                     key={todo.ID}
+                  />
+               )
+               : <Placeholder>You haven't created any to-dos yet...</Placeholder>
          }
       </Reorder.Group>
    );
