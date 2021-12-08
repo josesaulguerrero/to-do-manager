@@ -11,7 +11,7 @@ import { InputBar } from "@components/InputBar";
 import { List } from "@components/List";
 import { ListFooter } from "@components/ListFooter";
 import { Instruction } from "@components/Instruction";
-import { Head } from "../components/Helmet";
+import { Head } from "../components/Head";
 // context
 
 export const Layout = ({ children }) => {

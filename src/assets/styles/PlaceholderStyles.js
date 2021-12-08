@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PlaceholderText = styled.p`
+export const PlaceholderText = styled.li`
    width: 100%;
    height: 100%;
    display: flex;
@@ -13,4 +13,5 @@ export const PlaceholderText = styled.p`
    };
    font: bold var(--fontSize) var(--fontFamily);
    text-align: center;
+   list-style: none;
 `;
