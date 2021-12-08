@@ -3,8 +3,8 @@ import React, { useContext } from "react";
 //assets and styled components
 import { FooterSection, FooterButton, FooterSpan, InfoSection, NavSection } from "../assets/styles/ListFooterStyles";
 // context
-import { todosContext } from "../context/todosContext";
-import { NavigationBar } from "./NavigationBar";
+import { todosContext } from "@context/todosContext";
+import { NavigationBar } from "@components/NavigationBar";
 
 export const ListFooter = () => {
    const { activeTodos, clearCompletedTodos } = useContext(todosContext);

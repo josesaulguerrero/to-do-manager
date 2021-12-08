@@ -5,7 +5,7 @@ import { useMotionValue, Reorder } from "framer-motion";
 //assets and styled components
 import { Card, Checkbox, RemoveButton, Span } from "../assets/styles/TodoCardStyles";
 // context
-import { todosContext } from "../context/todosContext";
+import { todosContext } from "@context/todosContext";
 
 
 export const TodoCard = ({ todo }) => {

@@ -3,9 +3,9 @@ import React, { useContext, useRef } from "react";
 import { v4 as uuid } from 'uuid';
 //components
 //assets and styled components
-import { Button, Form, Input } from "../assets/styles/InputBarStyles";
+import { Button, Form, Input } from "@styles/InputBarStyles";
 // context
-import { todosContext } from "../context/todosContext";
+import { todosContext } from "@context/todosContext";
 
 export const InputBar = () => {
    const { addTodo } = useContext(todosContext);

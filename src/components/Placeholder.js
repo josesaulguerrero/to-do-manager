@@ -2,7 +2,7 @@
 import React from "react";
 //components
 //assets and styled components
-import { PlaceholderText } from "../assets/styles/PlaceholderStyles";
+import { PlaceholderText } from "@styles/PlaceholderStyles";
 
 export const Placeholder = ({ children }) => {
    return (

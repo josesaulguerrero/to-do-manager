@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // images
-import lightBackground from "../images/bg-desktop-light.jpg";
-import darkBackground from "../images/bg-desktop-dark.jpg";
+import lightBackground from "@images/bg-desktop-light.jpg";
+import darkBackground from "@images/bg-desktop-dark.jpg";
 
 const backgroundHandler = ({ currentTheme }) => {
    return currentTheme === "light"

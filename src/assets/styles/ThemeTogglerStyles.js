@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 // images
-import SunIcon from "../images/icon-sun.svg";
-import MoonIcon from "../images/icon-moon.svg";
+import SunIcon from "@images/icon-sun.svg";
+import MoonIcon from "@images/icon-moon.svg";
 
 const imageHandler = ({ currentTheme }) => (
    currentTheme === "light"

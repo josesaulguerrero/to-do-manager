@@ -3,7 +3,7 @@ import {
    useMatch,
    useResolvedPath
 } from "react-router-dom";
-import { StyledLink } from "../assets/styles/CustomLinkStyles";
+import { StyledLink } from "@styles/CustomLinkStyles";
 
 export const CustomLink = ({ children, to, ...props }) => {
    let resolved = useResolvedPath(to);

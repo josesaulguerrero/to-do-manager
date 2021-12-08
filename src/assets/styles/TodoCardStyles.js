@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 // images
-import crossImage from "../images/icon-cross.svg";
-import checkImage from "../images/icon-check.svg";
+import crossImage from "@images/icon-cross.svg";
+import checkImage from "@images/icon-check.svg";
 
 export const Card = styled.article`
    width: 100%;

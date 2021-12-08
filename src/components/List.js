@@ -2,7 +2,7 @@
 import React from "react";
 //components
 //assets and styled components
-import { Section } from "../assets/styles/ListStyles";
+import { Section } from "@styles/ListStyles";
 
 export const List = ({ children }) => {
    return (

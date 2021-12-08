@@ -2,8 +2,8 @@
 import React from "react";
 //components
 //assets and styled components
-import { NavBar } from "../assets/styles/NavigationBarStyles";
-import { CustomLink } from "./CustomLink";
+import { NavBar } from "@styles/NavigationBarStyles";
+import { CustomLink } from "@components/CustomLink";
 
 
 export const NavigationBar = () => {

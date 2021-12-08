@@ -2,7 +2,7 @@
 import React from "react";
 //components
 //assets
-import { InstructionText } from "../assets/styles/InstructionStyles";
+import { InstructionText } from "@styles/InstructionStyles";
 
 
 export const Instruction = () => {

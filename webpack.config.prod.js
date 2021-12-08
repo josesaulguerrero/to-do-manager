@@ -17,6 +17,9 @@ module.exports = {
          '@src': path.resolve(__dirname, 'src'),
          '@components': path.resolve(__dirname, 'src/components'),
          '@images': path.resolve(__dirname, 'src/assets/images'),
+         '@pages': path.resolve(__dirname, 'src/pages'),
+         '@context': path.resolve(__dirname, 'src/context'),
+         '@routes': path.resolve(__dirname, 'src/routes'),
          '@styles': path.resolve(__dirname, 'src/assets/styles'),
       }
    },
@@ -57,7 +60,7 @@ module.exports = {
          inject: true,
          template: '/public/index.html',
          filename: './index.html',
-         title: 'React store',
+         title: 'Tasks manager',
          favicon: './public/favicon.ico'
       })
    ],

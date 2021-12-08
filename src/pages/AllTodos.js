@@ -4,10 +4,10 @@ import { Reorder } from "framer-motion";
 //components
 import { TodoCard } from "@components/TodoCard";
 // import { TodoCard } from "../components/TodoCard";
-import { Placeholder } from "../components/Placeholder";
+import { Placeholder } from "@components/Placeholder";
 //assets and styled components
 // context
-import { todosContext } from "../context/todosContext";
+import { todosContext } from "@context/todosContext";
 
 export const AllTodos = () => {
    const { allTodos, setAllTodos, saveTodosInLocalStorage } = useContext(todosContext);

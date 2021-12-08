@@ -1,6 +1,6 @@
 //libraries and hooks
 import React, { useContext } from "react";
-import { Button } from "../assets/styles/ThemeTogglerStyles";
+import { Button } from "@styles/ThemeTogglerStyles";
 //components
 //assets
 // context
