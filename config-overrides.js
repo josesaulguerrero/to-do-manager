@@ -1,9 +1,13 @@
-module.exports = function override(webpackConfig) {
-   webpackConfig.module.rules.push({
+const { addWebpackAlias, addWebpackModuleRule, override } = require("customize-cra");
+const path = require("path");
+
+module.exports = override(
+   addWebpackModuleRule({
       test: /\.mjs$/,
       include: /node_modules/,
       type: "javascript/auto"
-   });
-
-   return webpackConfig;
-}
+   }),
+   addWebpackAlias({
+      ['@components']: path.resolve(__dirname, './src/components')
+   })
+);
