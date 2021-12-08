@@ -76,5 +76,11 @@ export const FooterButton = styled.button`
    background-color: transparent;
    outline: none;
    cursor: pointer;
+
+   @media (hover: hover) {
+      :hover {
+         color: var(--brightBlue);
+      }
+   }
 `;
 
